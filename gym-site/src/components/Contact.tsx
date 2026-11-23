@@ -62,18 +62,18 @@ export function Contact() {
           </h2>
         </Reveal>
 
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <Reveal>
+        <div className="grid items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
+          <Reveal className="flex h-full flex-col">
             <ul className="space-y-6">
               <li className="flex gap-4">
                 <Phone className="mt-1 shrink-0 text-lime" size={20} />
                 <div>
-                  <p className="font-display text-xs tracking-wideish text-white/45">
+                  <p className="font-display text-xs tracking-wideish text-white/60">
                     PHONE
                   </p>
                   <a
                     href={`tel:${contact.phoneRaw}`}
-                    className="mt-1 block text-white transition-colors hover:text-lime"
+                    className="mt-1 inline-flex min-h-11 items-center text-white transition-colors hover:text-lime"
                   >
                     {contact.phone}
                   </a>
@@ -82,14 +82,14 @@ export function Contact() {
               <li className="flex gap-4">
                 <MessageCircle className="mt-1 shrink-0 text-lime" size={20} />
                 <div>
-                  <p className="font-display text-xs tracking-wideish text-white/45">
+                  <p className="font-display text-xs tracking-wideish text-white/60">
                     WHATSAPP
                   </p>
                   <a
                     href={getWhatsAppUrl()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1 block text-white transition-colors hover:text-lime"
+                    className="mt-1 inline-flex min-h-11 items-center text-white transition-colors hover:text-lime"
                   >
                     {contact.whatsapp}
                   </a>
@@ -98,7 +98,7 @@ export function Contact() {
               <li className="flex gap-4">
                 <MapPin className="mt-1 shrink-0 text-lime" size={20} />
                 <div>
-                  <p className="font-display text-xs tracking-wideish text-white/45">
+                  <p className="font-display text-xs tracking-wideish text-white/60">
                     ADDRESS
                   </p>
                   <p className="mt-1 text-white">{contact.address}</p>
@@ -107,7 +107,7 @@ export function Contact() {
               <li className="flex gap-4">
                 <Clock className="mt-1 shrink-0 text-lime" size={20} />
                 <div>
-                  <p className="font-display text-xs tracking-wideish text-white/45">
+                  <p className="font-display text-xs tracking-wideish text-white/60">
                     HOURS
                   </p>
                   <p className="mt-1 text-white">{contact.hours.weekdays}</p>
@@ -116,25 +116,27 @@ export function Contact() {
               </li>
             </ul>
 
-            <div className="mt-10 aspect-[16/10] overflow-hidden border border-white/10 bg-[#121212]">
-              <div className="flex h-full flex-col items-center justify-center gap-2 p-6 text-center">
+            <div className="mt-10 flex min-h-[220px] flex-1 overflow-hidden border border-white/10 bg-[#121212]">
+              <div
+                className="flex w-full flex-col items-center justify-center gap-3 bg-[radial-gradient(ellipse_at_center,_rgba(198,255,0,0.06),_transparent_65%)] p-6 text-center"
+                aria-label="Map placeholder"
+              >
                 <MapPin className="text-lime" size={28} />
                 <p className="font-display text-sm tracking-wideish text-white">
-                  GOOGLE MAPS EMBED
+                  FIND US ON THE MAP
                 </p>
-                <p className="max-w-xs text-xs text-white/45">
-                  Replace this placeholder with your Google Maps iframe embed
-                  code for {contact.address}.
+                <p className="max-w-xs text-xs leading-relaxed text-white/60">
+                  {contact.address}
                 </p>
               </div>
             </div>
           </Reveal>
 
-          <Reveal delay={0.1}>
+          <Reveal delay={0.1} className="h-full">
             <form
               onSubmit={onSubmit}
               noValidate
-              className="border border-white/10 bg-[#0c0c0c] p-6 sm:p-8"
+              className="flex h-full flex-col border border-white/10 bg-[#0c0c0c] p-6 sm:p-8"
             >
               <h3 className="font-display text-xl tracking-wideish text-white">
                 Send a Message
@@ -143,7 +145,7 @@ export function Contact() {
                 We&apos;ll open WhatsApp with your enquiry ready to send.
               </p>
 
-              <div className="mt-8 space-y-5">
+              <div className="mt-8 flex-1 space-y-5">
                 <div>
                   <label
                     htmlFor="name"
@@ -213,15 +215,16 @@ export function Contact() {
                 </div>
               </div>
 
-              <Button type="submit" className="mt-6 w-full">
-                Send via WhatsApp
-              </Button>
-
-              {submitted && (
-                <p className="mt-4 text-center text-sm text-lime">
-                  WhatsApp opened — thanks for reaching out.
-                </p>
-              )}
+              <div className="mt-auto pt-6">
+                <Button type="submit" className="w-full">
+                  Send via WhatsApp
+                </Button>
+                {submitted && (
+                  <p className="mt-4 text-center text-sm text-lime">
+                    WhatsApp opened — thanks for reaching out.
+                  </p>
+                )}
+              </div>
             </form>
           </Reveal>
         </div>

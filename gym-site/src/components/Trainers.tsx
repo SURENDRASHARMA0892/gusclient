@@ -48,7 +48,7 @@ export function Trainers() {
                     {trainer.name}
                   </h3>
                   <p className="mt-1 text-sm text-lime">{trainer.speciality}</p>
-                  <p className="mt-2 font-display text-xs tracking-wideish text-white/45">
+                  <p className="mt-2 font-display text-xs tracking-wideish text-white/60">
                     {trainer.experience} Experience
                   </p>
                 </div>

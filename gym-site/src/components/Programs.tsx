@@ -43,7 +43,7 @@ export function Programs() {
                   </p>
                   <a
                     href="#contact"
-                    className="mt-6 inline-flex items-center gap-1 font-display text-xs tracking-wideish text-lime transition-all group-hover:gap-2"
+                    className="mt-6 inline-flex min-h-11 items-center gap-1 font-display text-xs tracking-wideish text-lime transition-all group-hover:gap-2"
                   >
                     Learn More
                     <ArrowUpRight size={14} />

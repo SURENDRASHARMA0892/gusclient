@@ -64,8 +64,9 @@ export function Navbar() {
 
         <button
           type="button"
-          className="text-white lg:hidden"
+          className="-mr-2 flex h-11 w-11 items-center justify-center text-white lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X size={26} /> : <Menu size={26} />}
@@ -79,7 +80,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.25 }}
-            className="glass absolute inset-x-0 top-16 border-t border-white/10 lg:hidden"
+            className="absolute inset-x-0 top-16 border-t border-white/10 bg-ink lg:hidden"
           >
             <ul className="section-pad flex flex-col gap-1 py-6">
               {gymConfig.nav.map((item) => (
@@ -87,7 +88,7 @@ export function Navbar() {
                   <a
                     href={item.href}
                     onClick={close}
-                    className="block py-3 font-display text-lg tracking-wideish text-white hover:text-lime"
+                    className="block py-3.5 font-display text-lg tracking-wideish text-white hover:text-lime"
                   >
                     {item.label}
                   </a>

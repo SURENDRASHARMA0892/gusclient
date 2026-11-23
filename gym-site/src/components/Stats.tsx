@@ -15,7 +15,7 @@ export function Stats() {
             <p className="font-display text-4xl tracking-tighterest text-lime sm:text-5xl lg:text-6xl">
               {stat.value}
             </p>
-            <p className="mt-2 font-display text-xs tracking-wideish text-white/50">
+            <p className="mt-2 font-display text-xs tracking-wideish text-white/60">
               {stat.label}
             </p>
           </StaggerItem>

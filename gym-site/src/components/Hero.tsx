@@ -55,10 +55,12 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.55 }}
-          className="mt-10 flex flex-col gap-4 sm:flex-row"
+          className="mt-10 flex w-full max-w-md flex-col gap-4 sm:max-w-none sm:flex-row"
         >
-          <Button href="#membership">Start Your Journey</Button>
-          <Button href="#programs" variant="outline">
+          <Button href="#membership" className="w-full sm:w-auto">
+            Start Your Journey
+          </Button>
+          <Button href="#programs" variant="outline" className="w-full sm:w-auto">
             Explore Programs
           </Button>
         </motion.div>
@@ -69,7 +71,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.1, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-1 text-white/50 transition-colors hover:text-lime"
+        className="absolute bottom-6 left-1/2 z-10 flex min-h-11 -translate-x-1/2 flex-col items-center justify-center gap-1 px-4 text-white/55 transition-colors hover:text-lime"
         aria-label="Scroll to content"
       >
         <span className="font-display text-[10px] tracking-wideish">SCROLL</span>

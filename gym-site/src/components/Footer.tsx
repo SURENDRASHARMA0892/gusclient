@@ -16,17 +16,17 @@ export function Footer() {
           >
             IRON<span className="text-lime"> CULT</span>
           </a>
-          <p className="mt-3 max-w-xs text-sm text-white/45">
+          <p className="mt-3 max-w-xs text-sm text-white/60">
             Premium training. Relentless standards. Built different.
           </p>
         </div>
 
-        <ul className="flex flex-wrap gap-x-8 gap-y-3">
+        <ul className="flex flex-wrap gap-x-6 gap-y-1">
           {gymConfig.nav.map((item) => (
             <li key={item.href}>
               <a
                 href={item.href}
-                className="font-display text-xs tracking-wideish text-white/55 transition-colors hover:text-lime"
+                className="inline-flex min-h-11 items-center font-display text-xs tracking-wideish text-white/70 transition-colors hover:text-lime"
               >
                 {item.label}
               </a>
@@ -57,7 +57,7 @@ export function Footer() {
       </div>
 
       <div className="mx-auto mt-12 max-w-6xl border-t border-white/10 pt-6">
-        <p className="font-display text-[10px] tracking-wideish text-white/35">
+        <p className="font-display text-xs tracking-wideish text-white/50">
           © {year} {gymConfig.name}. All rights reserved.
         </p>
       </div>
