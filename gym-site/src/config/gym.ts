@@ -26,7 +26,11 @@ export const gymConfig = {
     /** Digits only with country code for https://wa.me/ */
     whatsappRaw: "918440071458",
     email: "hello@mrfitness.com",
-    address: "2847 Iron Avenue, Downtown District, NY 10013",
+    address:
+      "Sanjivani Plaza, Second Floor, Samdari, Rajasthan 344021, India",
+    /** Opens Google Maps search/directions for this address */
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Sanjivani+Plaza+Second+Floor+Samdari+Rajasthan+344021+India",
     hours: {
       weekdays: "Mon – Sat: 5:00 AM – 11:00 PM",
       weekends: "Sunday: Closed",

@@ -101,7 +101,14 @@ export function Contact() {
                   <p className="font-display text-xs tracking-wideish text-white/60">
                     ADDRESS
                   </p>
-                  <p className="mt-1 text-white">{contact.address}</p>
+                  <a
+                    href={contact.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 block text-white transition-colors hover:text-lime"
+                  >
+                    {contact.address}
+                  </a>
                 </div>
               </li>
               <li className="flex gap-4">
@@ -116,20 +123,26 @@ export function Contact() {
               </li>
             </ul>
 
-            <div className="mt-10 flex min-h-[220px] flex-1 overflow-hidden border border-white/10 bg-[#121212]">
-              <div
-                className="flex w-full flex-col items-center justify-center gap-3 bg-[radial-gradient(ellipse_at_center,_rgba(198,255,0,0.06),_transparent_65%)] p-6 text-center"
-                aria-label="Map placeholder"
-              >
-                <MapPin className="text-lime" size={28} />
+            <a
+              href={contact.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mt-10 flex min-h-[220px] flex-1 overflow-hidden border border-white/10 bg-[#121212] transition-colors hover:border-lime/40"
+              aria-label={`Open Google Maps for ${contact.address}`}
+            >
+              <div className="flex w-full flex-col items-center justify-center gap-3 bg-[radial-gradient(ellipse_at_center,_rgba(198,255,0,0.06),_transparent_65%)] p-6 text-center">
+                <MapPin className="text-lime transition-transform group-hover:scale-110" size={28} />
                 <p className="font-display text-sm tracking-wideish text-white">
                   FIND US ON THE MAP
                 </p>
                 <p className="max-w-xs text-xs leading-relaxed text-white/60">
                   {contact.address}
                 </p>
+                <p className="font-display text-[10px] tracking-wideish text-lime">
+                  OPEN IN GOOGLE MAPS
+                </p>
               </div>
-            </div>
+            </a>
           </Reveal>
 
           <Reveal delay={0.1} className="h-full">
