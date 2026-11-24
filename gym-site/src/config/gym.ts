@@ -158,7 +158,7 @@ export const gymConfig = {
       id: "starter",
       name: "STARTER",
       /** INR monthly — edit here */
-      price: 1999,
+      price: 1000,
       duration: "per month",
       highlighted: false,
       benefits: [
@@ -171,7 +171,7 @@ export const gymConfig = {
     {
       id: "pro",
       name: "PRO",
-      price: 3499,
+      price: 1500,
       duration: "per month",
       highlighted: true,
       benefits: [
@@ -185,7 +185,7 @@ export const gymConfig = {
     {
       id: "elite",
       name: "ELITE",
-      price: 5999,
+      price: 2000,
       duration: "per month",
       highlighted: false,
       benefits: [

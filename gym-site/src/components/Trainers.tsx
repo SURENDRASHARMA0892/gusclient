@@ -24,7 +24,7 @@ export function Trainers() {
         <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {gymConfig.trainers.map((trainer) => (
             <StaggerItem key={trainer.name}>
-              <article className="group overflow-hidden border border-white/10 bg-[#0c0c0c]">
+              <article className="group overflow-hidden border border-white/10 bg-ink-soft">
                 <div className="relative aspect-[4/5] overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img

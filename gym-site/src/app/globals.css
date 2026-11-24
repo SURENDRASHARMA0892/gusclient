@@ -3,9 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --background: #080808;
+  --background: #1a1210;
   --foreground: #ffffff;
   --lime: #c6ff00;
+  --ink: #1a1210;
+  --ink-soft: #241c18;
+  --ink-muted: #2e241f;
 }
 
 html {
@@ -29,7 +32,7 @@ body {
 
 ::selection {
   background: #c6ff00;
-  color: #080808;
+  color: #1a1210;
 }
 
 @layer utilities {
@@ -38,7 +41,7 @@ body {
   }
 
   .glass {
-    background: rgba(8, 8, 8, 0.55);
+    background: rgba(26, 18, 16, 0.72);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -54,10 +57,10 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #080808;
+  background: #1a1210;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
+  background: #3d322c;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #c6ff00;

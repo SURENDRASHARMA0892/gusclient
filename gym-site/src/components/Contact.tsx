@@ -127,7 +127,7 @@ export function Contact() {
               href={contact.mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group mt-10 flex min-h-[220px] flex-1 overflow-hidden border border-white/10 bg-[#121212] transition-colors hover:border-lime/40"
+              className="group mt-10 flex min-h-[220px] flex-1 overflow-hidden border border-white/10 bg-ink-muted transition-colors hover:border-lime/40"
               aria-label={`Open Google Maps for ${contact.address}`}
             >
               <div className="flex w-full flex-col items-center justify-center gap-3 bg-[radial-gradient(ellipse_at_center,_rgba(198,255,0,0.06),_transparent_65%)] p-6 text-center">
@@ -149,7 +149,7 @@ export function Contact() {
             <form
               onSubmit={onSubmit}
               noValidate
-              className="flex h-full flex-col border border-white/10 bg-[#0c0c0c] p-6 sm:p-8"
+              className="flex h-full flex-col border border-white/10 bg-ink-soft p-6 sm:p-8"
             >
               <h3 className="font-display text-xl tracking-wideish text-white">
                 Send a Message

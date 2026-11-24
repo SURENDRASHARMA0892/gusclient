@@ -29,7 +29,7 @@ export function Membership() {
                 className={`relative flex h-full flex-col border p-7 sm:p-8 ${
                   plan.highlighted
                     ? "border-lime bg-lime/5"
-                    : "border-white/10 bg-[#0c0c0c]"
+                    : "border-white/10 bg-ink-soft"
                 }`}
               >
                 {plan.highlighted && (

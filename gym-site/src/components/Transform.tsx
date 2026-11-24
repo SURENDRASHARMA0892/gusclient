@@ -7,7 +7,7 @@ export function Transform() {
   const { transform } = gymConfig;
 
   return (
-    <section id="transform" className="section-pad relative overflow-hidden bg-[#0c0c0c] py-24 sm:py-32">
+    <section id="transform" className="section-pad relative overflow-hidden bg-ink-soft py-24 sm:py-32">
       <div className="mx-auto max-w-6xl">
         <Reveal className="mb-14 text-center">
           <p className="mb-4 font-display text-xs tracking-wideish text-lime">
