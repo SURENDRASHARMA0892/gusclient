@@ -12,11 +12,11 @@ export function Programs() {
           <p className="mb-4 font-display text-xs tracking-wideish text-lime">
             PROGRAMS
           </p>
-          <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] leading-[1.05] tracking-tighterest text-white">
+          <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] leading-[1.05] tracking-tighterest text-fog">
             TRAIN WITH{" "}
             <span className="text-lime">PURPOSE.</span>
           </h2>
-          <p className="mt-4 text-white/60">
+          <p className="mt-4 text-fog-muted">
             Six focused paths. One standard — excellence under the bar.
           </p>
         </Reveal>
@@ -24,7 +24,7 @@ export function Programs() {
         <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {gymConfig.programs.map((program) => (
             <StaggerItem key={program.id}>
-              <article className="group relative flex h-full flex-col overflow-hidden border border-white/10 bg-ink transition-colors duration-300 hover:border-lime/40">
+              <article className="group relative flex h-full flex-col overflow-hidden border border-line bg-ink transition-colors duration-300 hover:border-lime/40">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
@@ -35,10 +35,10 @@ export function Programs() {
                   <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
                 </div>
                 <div className="flex flex-1 flex-col p-6">
-                  <h3 className="font-display text-xl tracking-wideish text-white">
+                  <h3 className="font-display text-xl tracking-wideish text-fog">
                     {program.title}
                   </h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-white/55">
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-fog-muted">
                     {program.description}
                   </p>
                   <a

@@ -27,11 +27,11 @@ export function About() {
             <p className="mb-4 font-display text-xs tracking-wideish text-lime">
               ABOUT US
             </p>
-            <h2 className="font-display text-[clamp(2rem,5vw,3.75rem)] leading-[1.05] tracking-tighterest text-white">
+            <h2 className="font-display text-[clamp(2rem,5vw,3.75rem)] leading-[1.05] tracking-tighterest text-fog">
               {about.heading.split("IT'S A MINDSET.")[0]}
               <span className="text-lime">IT&apos;S A MINDSET.</span>
             </h2>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/65 sm:text-lg">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-fog-muted sm:text-lg">
               {about.philosophy}
             </p>
           </Reveal>
@@ -40,10 +40,10 @@ export function About() {
             {about.pillars.map((pillar) => (
               <StaggerItem key={pillar.title}>
                 <div className="border-t border-lime/50 pt-4">
-                  <h3 className="font-display text-lg tracking-wideish text-white">
+                  <h3 className="font-display text-lg tracking-wideish text-fog">
                     {pillar.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-white/55">
+                  <p className="mt-2 text-sm leading-relaxed text-fog-muted">
                     {pillar.description}
                   </p>
                 </div>

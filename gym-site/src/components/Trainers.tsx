@@ -12,11 +12,11 @@ export function Trainers() {
           <p className="mb-4 font-display text-xs tracking-wideish text-lime">
             TRAINERS
           </p>
-          <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] leading-[1.05] tracking-tighterest text-white">
+          <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] leading-[1.05] tracking-tighterest text-fog">
             COACHED BY THE{" "}
             <span className="text-lime">BEST.</span>
           </h2>
-          <p className="mt-4 text-white/60">
+          <p className="mt-4 text-fog-muted">
             Elite coaches who live the grind and demand your best.
           </p>
         </Reveal>
@@ -24,7 +24,7 @@ export function Trainers() {
         <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {gymConfig.trainers.map((trainer) => (
             <StaggerItem key={trainer.name}>
-              <article className="group overflow-hidden border border-white/10 bg-ink-soft">
+              <article className="group overflow-hidden border border-line bg-ink-soft">
                 <div className="relative aspect-[4/5] overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
@@ -37,18 +37,18 @@ export function Trainers() {
                     href={trainer.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center border border-white/20 bg-ink/60 text-white backdrop-blur-sm transition-colors hover:border-lime hover:text-lime"
+                    className="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center border border-line-strong bg-ink/60 text-fog backdrop-blur-sm transition-colors hover:border-lime hover:text-lime"
                     aria-label={`${trainer.name} on Instagram`}
                   >
                     <Instagram size={18} />
                   </a>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-display text-2xl tracking-wideish text-white">
+                  <h3 className="font-display text-2xl tracking-wideish text-fog">
                     {trainer.name}
                   </h3>
                   <p className="mt-1 text-sm text-lime">{trainer.speciality}</p>
-                  <p className="mt-2 font-display text-xs tracking-wideish text-white/60">
+                  <p className="mt-2 font-display text-xs tracking-wideish text-fog-muted">
                     {trainer.experience} Experience
                   </p>
                 </div>

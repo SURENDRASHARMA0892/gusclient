@@ -13,11 +13,11 @@ export function Transform() {
           <p className="mb-4 font-display text-xs tracking-wideish text-lime">
             TRANSFORMATIONS
           </p>
-          <h2 className="font-display text-[clamp(2rem,5vw,3.75rem)] leading-[1.05] tracking-tighterest text-white">
+          <h2 className="font-display text-[clamp(2rem,5vw,3.75rem)] leading-[1.05] tracking-tighterest text-fog">
             {transform.heading.split("IS YOU.")[0]}
             <span className="text-lime">IS YOU.</span>
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-white/60">{transform.copy}</p>
+          <p className="mx-auto mt-5 max-w-xl text-fog-muted">{transform.copy}</p>
         </Reveal>
 
         <Reveal className="grid gap-4 sm:grid-cols-2 sm:gap-6">
@@ -28,7 +28,7 @@ export function Transform() {
               alt="Training journey — before placeholder"
               className="aspect-[4/5] w-full object-cover sm:aspect-[3/4]"
             />
-            <figcaption className="absolute left-0 top-0 bg-ink/80 px-4 py-2 font-display text-xs tracking-wideish text-white backdrop-blur-sm">
+            <figcaption className="absolute left-0 top-0 bg-ink/80 px-4 py-2 font-display text-xs tracking-wideish text-fog backdrop-blur-sm">
               BEFORE
             </figcaption>
           </figure>

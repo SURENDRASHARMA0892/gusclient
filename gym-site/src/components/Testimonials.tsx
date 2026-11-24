@@ -12,7 +12,7 @@ export function Testimonials() {
           <p className="mb-4 font-display text-xs tracking-wideish text-lime">
             TESTIMONIALS
           </p>
-          <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] leading-[1.05] tracking-tighterest text-white">
+          <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] leading-[1.05] tracking-tighterest text-fog">
             REAL PEOPLE.{" "}
             <span className="text-lime">REAL RESULTS.</span>
           </h2>
@@ -21,7 +21,7 @@ export function Testimonials() {
         <Stagger className="grid gap-5 md:grid-cols-3">
           {gymConfig.testimonials.map((item) => (
             <StaggerItem key={item.name}>
-              <blockquote className="flex h-full flex-col border border-white/10 bg-ink p-7">
+              <blockquote className="flex h-full flex-col border border-line bg-ink p-7">
                 <div className="mb-4 flex gap-1" aria-label={`${item.rating} out of 5 stars`}>
                   {Array.from({ length: item.rating }).map((_, i) => (
                     <Star
@@ -31,10 +31,10 @@ export function Testimonials() {
                     />
                   ))}
                 </div>
-                <p className="flex-1 text-sm leading-relaxed text-white/70">
+                <p className="flex-1 text-sm leading-relaxed text-fog-soft/90">
                   &ldquo;{item.text}&rdquo;
                 </p>
-                <footer className="mt-6 border-t border-white/10 pt-4 font-display text-sm tracking-wideish text-white">
+                <footer className="mt-6 border-t border-line pt-4 font-display text-sm tracking-wideish text-fog">
                   {item.name}
                 </footer>
               </blockquote>

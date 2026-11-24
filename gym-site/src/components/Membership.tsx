@@ -13,11 +13,11 @@ export function Membership() {
           <p className="mb-4 font-display text-xs tracking-wideish text-lime">
             MEMBERSHIP
           </p>
-          <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] leading-[1.05] tracking-tighterest text-white">
+          <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] leading-[1.05] tracking-tighterest text-fog">
             INVEST IN{" "}
             <span className="text-lime">YOURSELF.</span>
           </h2>
-          <p className="mt-4 text-white/60">
+          <p className="mt-4 text-fog-muted">
             Transparent pricing. No lock-in games. Cancel anytime.
           </p>
         </Reveal>
@@ -29,7 +29,7 @@ export function Membership() {
                 className={`relative flex h-full flex-col border p-7 sm:p-8 ${
                   plan.highlighted
                     ? "border-lime bg-lime/5"
-                    : "border-white/10 bg-ink-soft"
+                    : "border-line bg-ink-soft"
                 }`}
               >
                 {plan.highlighted && (
@@ -37,25 +37,25 @@ export function Membership() {
                     MOST POPULAR
                   </span>
                 )}
-                <h3 className="font-display text-xl tracking-wideish text-white">
+                <h3 className="font-display text-xl tracking-wideish text-fog">
                   {plan.name}
                 </h3>
                 <div className="mt-5 flex items-baseline gap-1">
-                  <span className="font-display text-5xl tracking-tighterest text-white">
+                  <span className="font-display text-5xl tracking-tighterest text-fog">
                     {formatPrice(plan.price)}
                   </span>
-                  <span className="text-sm text-white/45">{plan.duration}</span>
+                  <span className="text-sm text-fog-dim">{plan.duration}</span>
                 </div>
                 <ul className="mt-8 flex flex-1 flex-col gap-3">
                   {plan.benefits.map((benefit) => (
                     <li
                       key={benefit}
-                      className="flex items-start gap-3 text-sm text-white/70"
+                      className="flex items-start gap-3 text-sm text-fog-soft/90"
                     >
                       <Check
                         size={16}
                         className={`mt-0.5 shrink-0 ${
-                          plan.highlighted ? "text-lime" : "text-white/40"
+                          plan.highlighted ? "text-lime" : "text-fog-dim"
                         }`}
                       />
                       {benefit}

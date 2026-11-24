@@ -56,7 +56,7 @@ export function Contact() {
           <p className="mb-4 font-display text-xs tracking-wideish text-lime">
             CONTACT
           </p>
-          <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] leading-[1.05] tracking-tighterest text-white">
+          <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] leading-[1.05] tracking-tighterest text-fog">
             GET IN{" "}
             <span className="text-lime">TOUCH.</span>
           </h2>
@@ -68,12 +68,12 @@ export function Contact() {
               <li className="flex gap-4">
                 <Phone className="mt-1 shrink-0 text-lime" size={20} />
                 <div>
-                  <p className="font-display text-xs tracking-wideish text-white/60">
+                  <p className="font-display text-xs tracking-wideish text-fog-muted">
                     PHONE
                   </p>
                   <a
                     href={`tel:${contact.phoneRaw}`}
-                    className="mt-1 inline-flex min-h-11 items-center text-white transition-colors hover:text-lime"
+                    className="mt-1 inline-flex min-h-11 items-center text-fog transition-colors hover:text-lime"
                   >
                     {contact.phone}
                   </a>
@@ -82,14 +82,14 @@ export function Contact() {
               <li className="flex gap-4">
                 <MessageCircle className="mt-1 shrink-0 text-lime" size={20} />
                 <div>
-                  <p className="font-display text-xs tracking-wideish text-white/60">
+                  <p className="font-display text-xs tracking-wideish text-fog-muted">
                     WHATSAPP
                   </p>
                   <a
                     href={getWhatsAppUrl()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1 inline-flex min-h-11 items-center text-white transition-colors hover:text-lime"
+                    className="mt-1 inline-flex min-h-11 items-center text-fog transition-colors hover:text-lime"
                   >
                     {contact.whatsapp}
                   </a>
@@ -98,14 +98,14 @@ export function Contact() {
               <li className="flex gap-4">
                 <MapPin className="mt-1 shrink-0 text-lime" size={20} />
                 <div>
-                  <p className="font-display text-xs tracking-wideish text-white/60">
+                  <p className="font-display text-xs tracking-wideish text-fog-muted">
                     ADDRESS
                   </p>
                   <a
                     href={contact.mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1 block text-white transition-colors hover:text-lime"
+                    className="mt-1 block text-fog transition-colors hover:text-lime"
                   >
                     {contact.address}
                   </a>
@@ -114,11 +114,11 @@ export function Contact() {
               <li className="flex gap-4">
                 <Clock className="mt-1 shrink-0 text-lime" size={20} />
                 <div>
-                  <p className="font-display text-xs tracking-wideish text-white/60">
+                  <p className="font-display text-xs tracking-wideish text-fog-muted">
                     HOURS
                   </p>
-                  <p className="mt-1 text-white">{contact.hours.weekdays}</p>
-                  <p className="text-white/70">{contact.hours.weekends}</p>
+                  <p className="mt-1 text-fog">{contact.hours.weekdays}</p>
+                  <p className="text-fog-soft/90">{contact.hours.weekends}</p>
                 </div>
               </li>
             </ul>
@@ -127,15 +127,15 @@ export function Contact() {
               href={contact.mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group mt-10 flex min-h-[220px] flex-1 overflow-hidden border border-white/10 bg-ink-muted transition-colors hover:border-lime/40"
+              className="group mt-10 flex min-h-[220px] flex-1 overflow-hidden border border-line bg-ink-muted transition-colors hover:border-lime/40"
               aria-label={`Open Google Maps for ${contact.address}`}
             >
               <div className="flex w-full flex-col items-center justify-center gap-3 bg-[radial-gradient(ellipse_at_center,_rgba(198,255,0,0.06),_transparent_65%)] p-6 text-center">
                 <MapPin className="text-lime transition-transform group-hover:scale-110" size={28} />
-                <p className="font-display text-sm tracking-wideish text-white">
+                <p className="font-display text-sm tracking-wideish text-fog">
                   FIND US ON THE MAP
                 </p>
-                <p className="max-w-xs text-xs leading-relaxed text-white/60">
+                <p className="max-w-xs text-xs leading-relaxed text-fog-muted">
                   {contact.address}
                 </p>
                 <p className="font-display text-[10px] tracking-wideish text-lime">
@@ -149,12 +149,12 @@ export function Contact() {
             <form
               onSubmit={onSubmit}
               noValidate
-              className="flex h-full flex-col border border-white/10 bg-ink-soft p-6 sm:p-8"
+              className="flex h-full flex-col border border-line bg-ink-soft p-6 sm:p-8"
             >
-              <h3 className="font-display text-xl tracking-wideish text-white">
+              <h3 className="font-display text-xl tracking-wideish text-fog">
                 Send a Message
               </h3>
-              <p className="mt-2 text-sm text-white/50">
+              <p className="mt-2 text-sm text-fog-dim">
                 We&apos;ll open WhatsApp with your enquiry ready to send.
               </p>
 
@@ -162,7 +162,7 @@ export function Contact() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="font-display text-xs tracking-wideish text-white/60"
+                    className="font-display text-xs tracking-wideish text-fog-muted"
                   >
                     NAME
                   </label>
@@ -174,7 +174,7 @@ export function Contact() {
                     onChange={(e) =>
                       setValues((v) => ({ ...v, name: e.target.value }))
                     }
-                    className="mt-2 w-full border border-white/15 bg-ink px-4 py-3 text-white outline-none transition-colors focus:border-lime"
+                    className="mt-2 w-full border border-line-strong bg-ink px-4 py-3 text-fog outline-none transition-colors focus:border-lime"
                     placeholder="Your name"
                   />
                   {errors.name && (
@@ -185,7 +185,7 @@ export function Contact() {
                 <div>
                   <label
                     htmlFor="phone"
-                    className="font-display text-xs tracking-wideish text-white/60"
+                    className="font-display text-xs tracking-wideish text-fog-muted"
                   >
                     PHONE
                   </label>
@@ -197,7 +197,7 @@ export function Contact() {
                     onChange={(e) =>
                       setValues((v) => ({ ...v, phone: e.target.value }))
                     }
-                    className="mt-2 w-full border border-white/15 bg-ink px-4 py-3 text-white outline-none transition-colors focus:border-lime"
+                    className="mt-2 w-full border border-line-strong bg-ink px-4 py-3 text-fog outline-none transition-colors focus:border-lime"
                     placeholder="+91 84400 71458"
                   />
                   {errors.phone && (
@@ -208,7 +208,7 @@ export function Contact() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="font-display text-xs tracking-wideish text-white/60"
+                    className="font-display text-xs tracking-wideish text-fog-muted"
                   >
                     MESSAGE
                   </label>
@@ -219,7 +219,7 @@ export function Contact() {
                     onChange={(e) =>
                       setValues((v) => ({ ...v, message: e.target.value }))
                     }
-                    className="mt-2 w-full resize-y border border-white/15 bg-ink px-4 py-3 text-white outline-none transition-colors focus:border-lime"
+                    className="mt-2 w-full resize-y border border-line-strong bg-ink px-4 py-3 text-fog outline-none transition-colors focus:border-lime"
                     placeholder="Tell us what you're looking for..."
                   />
                   {errors.message && (

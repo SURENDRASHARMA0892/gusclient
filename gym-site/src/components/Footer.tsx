@@ -7,17 +7,17 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="section-pad border-t border-white/10 bg-ink py-14">
+    <footer className="section-pad border-t border-line bg-ink py-14">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
         <div>
           <a
             href="#home"
-            className="font-display text-2xl tracking-wideish text-white"
+            className="font-display text-2xl tracking-wideish text-fog"
           >
             {gymConfig.brand.primary}
             <span className="text-lime">{gymConfig.brand.accent}</span>
           </a>
-          <p className="mt-3 max-w-xs text-sm text-white/60">
+          <p className="mt-3 max-w-xs text-sm text-fog-muted">
             Premium training. Relentless standards. Built different.
           </p>
         </div>
@@ -27,7 +27,7 @@ export function Footer() {
             <li key={item.href}>
               <a
                 href={item.href}
-                className="inline-flex min-h-11 items-center font-display text-xs tracking-wideish text-white/70 transition-colors hover:text-lime"
+                className="inline-flex min-h-11 items-center font-display text-xs tracking-wideish text-fog-soft/90 transition-colors hover:text-lime"
               >
                 {item.label}
               </a>
@@ -41,7 +41,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className="flex h-10 w-10 items-center justify-center border border-white/15 text-white transition-colors hover:border-lime hover:text-lime"
+            className="flex h-10 w-10 items-center justify-center border border-line-strong text-fog transition-colors hover:border-lime hover:text-lime"
           >
             <Instagram size={18} />
           </a>
@@ -50,15 +50,15 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
-            className="flex h-10 w-10 items-center justify-center border border-white/15 text-white transition-colors hover:border-lime hover:text-lime"
+            className="flex h-10 w-10 items-center justify-center border border-line-strong text-fog transition-colors hover:border-lime hover:text-lime"
           >
             <Facebook size={18} />
           </a>
         </div>
       </div>
 
-      <div className="mx-auto mt-12 max-w-6xl border-t border-white/10 pt-6">
-        <p className="font-display text-xs tracking-wideish text-white/50">
+      <div className="mx-auto mt-12 max-w-6xl border-t border-line pt-6">
+        <p className="font-display text-xs tracking-wideish text-fog-dim">
           © {year} {gymConfig.name}. All rights reserved.
         </p>
       </div>

@@ -22,11 +22,11 @@ export function CTA() {
       <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-ink/40" />
 
       <Reveal className="relative z-10 mx-auto max-w-4xl text-center">
-        <h2 className="font-display text-[clamp(2.25rem,6vw,4.5rem)] leading-[1.02] tracking-tighterest text-white">
+        <h2 className="font-display text-[clamp(2.25rem,6vw,4.5rem)] leading-[1.02] tracking-tighterest text-fog">
           READY TO CHANGE{" "}
           <span className="text-lime">YOUR LIFE?</span>
         </h2>
-        <p className="mx-auto mt-5 max-w-lg text-white/70">
+        <p className="mx-auto mt-5 max-w-lg text-fog-soft/90">
           Stop waiting for Monday. Join the movement and train with people who
           refuse to quit.
         </p>

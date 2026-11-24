@@ -3,12 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --background: #1a1210;
-  --foreground: #ffffff;
+  --background: #171210;
+  --foreground: #f7f3ec;
+  --ink: #171210;
+  --ink-soft: #221a15;
+  --ink-muted: #2f261f;
+  --ink-deep: #120e0c;
+  --fog: #f7f3ec;
+  --fog-soft: #e4dcd0;
+  --fog-muted: #b8afa3;
+  --fog-dim: #8f867c;
+  --line: rgba(247, 243, 236, 0.12);
+  --line-strong: rgba(247, 243, 236, 0.22);
   --lime: #c6ff00;
-  --ink: #1a1210;
-  --ink-soft: #241c18;
-  --ink-muted: #2e241f;
+  --lime-soft: #d4ff3d;
+  --lime-dim: #9ecc00;
 }
 
 html {
@@ -24,15 +33,18 @@ html {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background:
+    radial-gradient(1200px 600px at 12% -10%, rgba(198, 255, 0, 0.04), transparent 55%),
+    radial-gradient(900px 500px at 90% 0%, rgba(120, 72, 40, 0.18), transparent 50%),
+    var(--background);
   font-family: var(--font-body), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background: #c6ff00;
-  color: #1a1210;
+  background: var(--lime);
+  color: var(--ink);
 }
 
 @layer utilities {
@@ -41,10 +53,10 @@ body {
   }
 
   .glass {
-    background: rgba(26, 18, 16, 0.72);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(23, 18, 16, 0.78);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--line);
   }
 
   .section-pad {
@@ -57,11 +69,11 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #1a1210;
+  background: var(--ink);
 }
 ::-webkit-scrollbar-thumb {
-  background: #3d322c;
+  background: #4a3d34;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #c6ff00;
+  background: var(--lime);
 }

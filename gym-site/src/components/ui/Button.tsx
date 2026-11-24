@@ -17,14 +17,14 @@ type ButtonProps = {
 
 const styles: Record<Variant, string> = {
   primary:
-    "bg-lime text-ink hover:bg-white hover:text-ink shadow-[0_0_0_0_rgba(198,255,0,0)] hover:shadow-[0_0_28px_rgba(198,255,0,0.35)]",
+    "bg-lime text-ink hover:bg-lime-soft hover:text-ink shadow-none hover:shadow-lime-glow",
   outline:
-    "border border-white/40 text-white hover:border-lime hover:text-lime bg-transparent",
-  ghost: "text-white hover:text-lime bg-transparent",
+    "border border-line-strong text-fog hover:border-lime hover:text-lime bg-transparent",
+  ghost: "text-fog hover:text-lime bg-transparent",
 };
 
 const base =
-  "inline-flex items-center justify-center gap-2 px-7 py-3.5 font-display text-sm tracking-wideish uppercase transition-colors duration-300 disabled:opacity-50 disabled:pointer-events-none";
+  "inline-flex items-center justify-center gap-2 px-7 py-3.5 font-display text-sm tracking-wideish uppercase transition-all duration-300 disabled:opacity-50 disabled:pointer-events-none";
 
 export function Button({
   children,

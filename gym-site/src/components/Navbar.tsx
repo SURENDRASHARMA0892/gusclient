@@ -30,14 +30,14 @@ export function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled || open
-          ? "border-b border-white/10 bg-ink/95 backdrop-blur-md"
+          ? "border-b border-line bg-ink/95 backdrop-blur-md"
           : "bg-transparent"
       }`}
     >
       <nav className="section-pad flex h-16 items-center justify-between lg:h-20">
         <a
           href="#home"
-          className="font-display text-xl tracking-wideish text-white sm:text-2xl"
+          className="font-display text-xl tracking-wideish text-fog sm:text-2xl"
           onClick={close}
         >
           {gymConfig.brand.primary}
@@ -49,7 +49,7 @@ export function Navbar() {
             <li key={item.href}>
               <a
                 href={item.href}
-                className="font-display text-xs tracking-wideish text-white/70 transition-colors hover:text-lime"
+                className="font-display text-xs tracking-wideish text-fog-soft/90 transition-colors hover:text-lime"
               >
                 {item.label}
               </a>
@@ -65,7 +65,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="-mr-2 flex h-11 w-11 items-center justify-center text-white lg:hidden"
+          className="-mr-2 flex h-11 w-11 items-center justify-center text-fog lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -81,7 +81,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.25 }}
-            className="absolute inset-x-0 top-16 border-t border-white/10 bg-ink lg:hidden"
+            className="absolute inset-x-0 top-16 border-t border-line bg-ink lg:hidden"
           >
             <ul className="section-pad flex flex-col gap-1 py-6">
               {gymConfig.nav.map((item) => (
@@ -89,7 +89,7 @@ export function Navbar() {
                   <a
                     href={item.href}
                     onClick={close}
-                    className="block py-3.5 font-display text-lg tracking-wideish text-white hover:text-lime"
+                    className="block py-3.5 font-display text-lg tracking-wideish text-fog hover:text-lime"
                   >
                     {item.label}
                   </a>

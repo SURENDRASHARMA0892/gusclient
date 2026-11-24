@@ -59,7 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
-      <body className="bg-ink text-white antialiased">{children}</body>
+      <body className="bg-ink text-fog antialiased">{children}</body>
     </html>
   );
 }
