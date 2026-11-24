@@ -14,7 +14,8 @@ export function Footer() {
             href="#home"
             className="font-display text-2xl tracking-wideish text-white"
           >
-            IRON<span className="text-lime"> CULT</span>
+            {gymConfig.brand.primary}
+            <span className="text-lime">{gymConfig.brand.accent}</span>
           </a>
           <p className="mt-3 max-w-xs text-sm text-white/60">
             Premium training. Relentless standards. Built different.

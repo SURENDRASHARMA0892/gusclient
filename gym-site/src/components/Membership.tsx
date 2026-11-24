@@ -1,7 +1,7 @@
 "use client";
 
 import { Check } from "lucide-react";
-import { gymConfig, getWhatsAppUrl } from "@/config/gym";
+import { formatPrice, gymConfig, getWhatsAppUrl } from "@/config/gym";
 import { Button } from "./ui/Button";
 import { Reveal, Stagger, StaggerItem } from "./ui/Reveal";
 
@@ -42,7 +42,7 @@ export function Membership() {
                 </h3>
                 <div className="mt-5 flex items-baseline gap-1">
                   <span className="font-display text-5xl tracking-tighterest text-white">
-                    ${plan.price}
+                    {formatPrice(plan.price)}
                   </span>
                   <span className="text-sm text-white/45">{plan.duration}</span>
                 </div>
@@ -65,7 +65,7 @@ export function Membership() {
                 <div className="mt-8">
                   <Button
                     href={getWhatsAppUrl(
-                      `Hi! I'm interested in the ${plan.name} membership at Iron Cult Fitness.`
+                      `Hi! I'm interested in the ${plan.name} membership at ${gymConfig.name}.`
                     )}
                     variant={plan.highlighted ? "primary" : "outline"}
                     className="w-full"

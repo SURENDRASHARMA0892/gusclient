@@ -14,7 +14,7 @@ export function About() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={aboutImage}
-              alt="Iron Cult Fitness training floor"
+              alt={`${gymConfig.name} training floor`}
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/70 to-transparent" />

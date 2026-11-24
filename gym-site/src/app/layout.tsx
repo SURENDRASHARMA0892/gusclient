@@ -29,14 +29,13 @@ function siteUrl(): string {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
   title: `${gymConfig.name} | Premium Gym & Fitness`,
-  description:
-    "Push your limits. Build strength. Become unstoppable. IRON CULT FITNESS — premium athletic training, elite coaches, and a community built different.",
+  description: `Push your limits. Build strength. Become unstoppable. ${gymConfig.name} — premium athletic training, elite coaches, and a community built different.`,
   keywords: [
     "gym",
     "fitness",
     "personal training",
     "strength training",
-    "Iron Cult Fitness",
+    gymConfig.name,
     "HIIT",
     "membership",
   ],

@@ -15,7 +15,7 @@ export function Hero() {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${gymConfig.heroImage})` }}
         role="img"
-        aria-label="Athlete training at Iron Cult Fitness"
+        aria-label={`Athlete training at ${gymConfig.name}`}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/25" />
       <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/40" />

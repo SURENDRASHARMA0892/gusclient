@@ -40,7 +40,8 @@ export function Navbar() {
           className="font-display text-xl tracking-wideish text-white sm:text-2xl"
           onClick={close}
         >
-          IRON<span className="text-lime"> CULT</span>
+          {gymConfig.brand.primary}
+          <span className="text-lime">{gymConfig.brand.accent}</span>
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">

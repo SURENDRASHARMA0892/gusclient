@@ -1,4 +1,4 @@
-# IRON CULT FITNESS
+# MR FITNESS
 
 Premium modern gym & fitness marketing site.
 

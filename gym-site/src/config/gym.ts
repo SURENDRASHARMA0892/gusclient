@@ -1,33 +1,45 @@
 /**
- * IRON CULT FITNESS — single editable config
+ * MR FITNESS — single editable config
  * Update gym name, contact, address, prices, trainers, and social links here.
  */
 
 export const gymConfig = {
-  name: "IRON CULT FITNESS",
+  name: "MR FITNESS",
+  /** Navbar / footer wordmark split for accent styling */
+  brand: {
+    primary: "MR",
+    accent: " FITNESS",
+  },
   tagline: "BUILT DIFFERENT. TRAIN DIFFERENT.",
   subtitle: "Push your limits. Build strength. Become unstoppable.",
 
+  /** Display symbol used on membership cards — change here for all prices */
+  currency: {
+    symbol: "₹",
+    code: "INR",
+  },
+
   contact: {
-    phone: "+1 (555) 234-8900",
-    phoneRaw: "15552348900",
-    whatsapp: "+1 (555) 234-8900",
-    whatsappRaw: "15552348900",
-    email: "hello@ironcultfitness.com",
+    phone: "+91 84400 71458",
+    phoneRaw: "918440071458",
+    whatsapp: "+91 84400 71458",
+    /** Digits only with country code for https://wa.me/ */
+    whatsappRaw: "918440071458",
+    email: "hello@mrfitness.com",
     address: "2847 Iron Avenue, Downtown District, NY 10013",
     hours: {
-      weekdays: "Mon – Fri: 5:00 AM – 11:00 PM",
-      weekends: "Sat – Sun: 6:00 AM – 10:00 PM",
+      weekdays: "Mon – Sat: 5:00 AM – 11:00 PM",
+      weekends: "Sunday: Closed",
     },
   },
 
   social: {
-    instagram: "https://instagram.com/ironcultfitness",
-    facebook: "https://facebook.com/ironcultfitness",
+    instagram: "https://instagram.com/mrfitness",
+    facebook: "https://facebook.com/mrfitness",
   },
 
   whatsappMessage:
-    "Hi IRON CULT FITNESS! I'd like to enquire about membership.",
+    "Hi MR FITNESS! I'd like to enquire about membership.",
 
   stats: [
     { value: "1000+", label: "Members" },
@@ -39,7 +51,7 @@ export const gymConfig = {
   about: {
     heading: "MORE THAN A GYM. IT'S A MINDSET.",
     philosophy:
-      "Iron Cult Fitness is built for those who refuse average. We combine elite coaching, industrial-grade equipment, and a community that holds you accountable — every rep, every session, every day.",
+      "MR FITNESS is built for those who refuse average. We combine elite coaching, industrial-grade equipment, and a community that holds you accountable — every rep, every session, every day.",
     pillars: [
       {
         title: "Equipment",
@@ -141,7 +153,8 @@ export const gymConfig = {
     {
       id: "starter",
       name: "STARTER",
-      price: 49,
+      /** INR monthly — edit here */
+      price: 1999,
       duration: "per month",
       highlighted: false,
       benefits: [
@@ -154,7 +167,7 @@ export const gymConfig = {
     {
       id: "pro",
       name: "PRO",
-      price: 89,
+      price: 3499,
       duration: "per month",
       highlighted: true,
       benefits: [
@@ -168,7 +181,7 @@ export const gymConfig = {
     {
       id: "elite",
       name: "ELITE",
-      price: 149,
+      price: 5999,
       duration: "per month",
       highlighted: false,
       benefits: [
@@ -185,7 +198,7 @@ export const gymConfig = {
     {
       name: "Alex M.",
       rating: 5,
-      text: "Iron Cult changed how I train. The coaches don't just count reps — they rebuild your mindset. Best decision I made this year.",
+      text: "MR FITNESS changed how I train. The coaches don't just count reps — they rebuild your mindset. Best decision I made this year.",
     },
     {
       name: "Priya S.",
@@ -224,6 +237,12 @@ export const gymConfig = {
 } as const;
 
 export type GymConfig = typeof gymConfig;
+
+/** Format membership price with config currency (e.g. ₹3,499) */
+export function formatPrice(amount: number): string {
+  const formatted = amount.toLocaleString("en-IN");
+  return `${gymConfig.currency.symbol}${formatted}`;
+}
 
 export function getWhatsAppUrl(customMessage?: string): string {
   const msg = encodeURIComponent(

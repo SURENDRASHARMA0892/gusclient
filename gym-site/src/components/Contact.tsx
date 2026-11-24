@@ -43,7 +43,7 @@ export function Contact() {
     setErrors(next);
     if (Object.keys(next).length > 0) return;
 
-    const text = `Hi Iron Cult Fitness!\nName: ${values.name}\nPhone: ${values.phone}\nMessage: ${values.message}`;
+    const text = `Hi ${gymConfig.name}!\nName: ${values.name}\nPhone: ${values.phone}\nMessage: ${values.message}`;
     window.open(getWhatsAppUrl(text), "_blank", "noopener,noreferrer");
     setSubmitted(true);
     setValues(initial);
@@ -185,7 +185,7 @@ export function Contact() {
                       setValues((v) => ({ ...v, phone: e.target.value }))
                     }
                     className="mt-2 w-full border border-white/15 bg-ink px-4 py-3 text-white outline-none transition-colors focus:border-lime"
-                    placeholder="+1 555 000 0000"
+                    placeholder="+91 84400 71458"
                   />
                   {errors.phone && (
                     <p className="mt-1.5 text-xs text-red-400">{errors.phone}</p>
