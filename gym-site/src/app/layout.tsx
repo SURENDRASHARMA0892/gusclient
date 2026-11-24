@@ -16,7 +16,18 @@ const body = Manrope({
   display: "swap",
 });
 
+function siteUrl(): string {
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "");
+  }
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL.replace(/\/$/, "")}`;
+  }
+  return "http://localhost:3000";
+}
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl()),
   title: `${gymConfig.name} | Premium Gym & Fitness`,
   description:
     "Push your limits. Build strength. Become unstoppable. IRON CULT FITNESS — premium athletic training, elite coaches, and a community built different.",
